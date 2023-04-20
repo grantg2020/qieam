@@ -11,8 +11,10 @@ export class ProfileComponent implements OnInit {
   constructor(private jeuxService: JeuxService) { }
 
   jeuxUtilisateur: JeuComponent[] = [];
+  jeuxDisponible: JeuComponent[] = [];
   ngOnInit(): void {
-    this.jeuxUtilisateur = this.jeuxService.getJeuxUtilisateur();
+    this.jeuxUtilisateur = this.jeuxService.getJeuxUtilisateur("grant");
+    this.jeuxDisponible = this.jeuxService.getJeuxDisponible();
   }
 
 }

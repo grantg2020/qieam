@@ -7,20 +7,32 @@ import { JeuComponent } from './jeu/jeu.component';
 export class JeuxService {
 
   jeuxUtilisateur = [
-    { titre: "Titre 1", prix: 19.99, appartenu: true, imageUrl: "" },
+    { titre: "Résumé", prix: 19.99, appartenu: true, imageUrl: "" },
+    { titre: "Résumé", prix: 29.99, appartenu: true, imageUrl: "" },
+    { titre: "Résumé", prix: 29.99, appartenu: true, imageUrl: "" },
+  ]
+
+  jeuxDisponible = [
+    { titre: "Titre 1", prix: 19.99, appartenu: false, imageUrl: "" },
     { titre: "Titre 2", prix: 29.99, appartenu: false, imageUrl: "" },
-    { titre: "Titre 3", prix: 29.99, appartenu: true, imageUrl: "" },
-    // new JeuComponent("Titre 1", 19.99, "Description", ""),
-    // new JeuComponent("Titre 2", 29.99, "Description", ""),
-    // new JeuComponent("Titre 3", 59.99, "Description", ""),
+    { titre: "Titre 3", prix: 29.99, appartenu: false, imageUrl: "" },
   ]
 
   constructor() { }
 
   /**
-   * 
+   * @returns Users games
    */
-  getJeuxUtilisateur() {
-    return this.jeuxUtilisateur;
+  getJeuxUtilisateur(user: string) {
+    if (user == "grant")
+      return this.jeuxUtilisateur;
+    return [];
+  }
+
+  /**
+   * @returns Users games
+   */
+  getJeuxDisponible() {
+    return this.jeuxDisponible;
   }
 }
