@@ -12,6 +12,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AmiComponent } from './ami/ami.component';
+import { FilterPipe } from 'filter.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     ProfileComponent,
     FriendsComponent,
-    NavbarComponent
+    NavbarComponent,
+    AmiComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

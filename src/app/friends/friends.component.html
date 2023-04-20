@@ -1,2 +1,19 @@
 <app-navbar></app-navbar>
-<p>friends works!</p>
+
+<div class="center">
+    <div class="container">
+        <div class="search-bar">
+            <mat-icon class="icon" fontIcon="search"></mat-icon>
+            <input placeholder="search" [(ngModel)]="searchText" autofocus />
+        </div>
+
+        <div class="amis">
+            <app-ami *ngFor="let ami of amis | appFilter: searchText" [name]="ami.name" [ajoute]="ami.ajoute"></app-ami>
+        </div>
+    </div>
+</div>
+
+<div class="arrows">
+    <mat-icon class="action-button" fontIcon="chevron_left"></mat-icon>
+    <mat-icon class="action-button" fontIcon="chevron_right"></mat-icon>
+</div>
