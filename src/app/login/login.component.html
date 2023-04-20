@@ -1,23 +1,19 @@
 <div class="form-wrapper">
     <img src="assets/logo.png" class="large-image" />
 
-    <form (ngSubmit)="onSubmit()">
-        <label>Username</label><br>
-        <input id="username" type="text" [(ngModel)]="username" required /><br>
-        <label>Password</label><br>
-        <input id="password" type="text" [(ngModel)]="password" required />
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <label for="username">Username</label><br>
+        <input id="username" type="text" formControlName="username" /><br>
+        <label for="password">Password</label><br>
+        <input id="password" type="password" formControlName="password" />
+        <p *ngIf="submitted && (formControl['username'].errors)" class="error-text">Invalid Credentials</p>
 
         <div class="buttons">
-            <!-- <img class="action-button" src="assets/close.png">
-            <img class="action-button" src="assets/login.png" routerLink="/profile"> -->
-            <mat-icon class="action-button" fontIcon="close"></mat-icon>
-            <mat-icon class="action-button" fontIcon="login" routerLink="/profile"></mat-icon>
+            <button class="custom-button" (click)="clear()" type="button">
+                <mat-icon class="action-button" fontIcon="close"></mat-icon>
+            </button>
+            <button class="custom-button"><mat-icon class="action-button" fontIcon="login" type="submit"></mat-icon>
+            </button>
         </div>
     </form>
 </div>
-
-<script>
-    function onSubmit() {
-        alert(component.username);
-    }
-</script>
