@@ -1,2 +1,14 @@
 <app-navbar></app-navbar>
-<p>profile works!</p>
+
+<h3>Mes jeux</h3>
+<div class="biblioteque">
+    <div *ngFor="let jeu of jeuxUtilisateur">
+        <app-jeu [titre]="jeu.titre" [prix]="jeu.prix" [appartenu]="jeu.appartenu" [imageUrl]="jeu.imageUrl"></app-jeu>
+    </div>
+</div>
+<h3>Les prochaines sorties</h3>
+<div class="biblioteque">
+    <div *ngFor="let jeu of jeuxUtilisateur">
+        <app-jeu [titre]="jeu.titre" [prix]="jeu.prix" [appartenu]="jeu.appartenu" [imageUrl]="jeu.imageUrl"></app-jeu>
+    </div>
+</div>

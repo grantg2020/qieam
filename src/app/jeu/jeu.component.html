@@ -1,1 +1,13 @@
-<p>jeu works!</p>
+<div class="jeu">
+    <img class="jeu-image" src="assets/placeholder.png">
+    <div class="jeu-item">
+        <h4 *ngIf="appartenu">{{titre}}</h4>
+        <div *ngIf="appartenu">
+            <p><img class="icon" src="assets/play.png">Play online</p>
+            <p><img class="icon" src="assets/get.png">Get media</p>
+        </div>
+        <div *ngIf="!appartenu">
+            <p><img class="icon" src="assets/cart.png">Buy</p>
+        </div>
+    </div>
+</div>
