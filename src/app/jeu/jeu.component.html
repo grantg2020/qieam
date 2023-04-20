@@ -3,11 +3,12 @@
     <div class="jeu-item">
         <h4 *ngIf="appartenu">{{titre}}</h4>
         <div *ngIf="appartenu">
-            <p><img class="icon" src="assets/play.png">Play online</p>
-            <p><img class="icon" src="assets/get.png">Get media</p>
+            <p><mat-icon class="icon" fontIcon="download"></mat-icon>Play online
+            </p>
+            <p><mat-icon class="icon" fontIcon="adjust"></mat-icon>Get media</p>
         </div>
         <div *ngIf="!appartenu">
-            <p><img class="icon" src="assets/cart.png">Buy</p>
+            <p><mat-icon class="icon" fontIcon="shopping_cart"></mat-icon>Buy</p>
         </div>
     </div>
 </div>
