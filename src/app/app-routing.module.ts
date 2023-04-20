@@ -6,9 +6,10 @@ import { LoginComponent } from './login/login.component';
 import { FriendsComponent } from './friends/friends.component';
 
 const routes: Routes = [
-  { path: '', component: ProfileComponent },
+  { path: 'profile', component: ProfileComponent },
   { path: 'login', component: LoginComponent },
   { path: 'friends', component: FriendsComponent },
+  { path: '', component: LoginComponent },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
