@@ -1,0 +1,46 @@
+@input-padding: 5px;
+
+.container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+
+    .amis {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .search-bar {
+        position: relative;
+
+        input {
+            padding: @input-padding;
+            padding-left: calc(@input-padding + 20px);
+            width: 300px;
+        }
+
+        .icon {
+            position: absolute;
+            top: calc(@input-padding / 2);
+            left: calc(@input-padding / 2);
+        }
+    }
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.arrows {
+    display: flex;
+    justify-content: space-around;
+
+    .action-button {
+        color: black;
+        cursor: pointer;
+    }
+}
