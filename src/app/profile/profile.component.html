@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <h3>Mes jeux</h3>
+    <div class="biblioteque">
+        <div *ngFor="let jeu of jeuxUtilisateur">
+            <app-jeu [titre]="jeu.titre" [prix]="jeu.prix" [appartenu]="jeu.appartenu"
+                [imageUrl]="jeu.imageUrl"></app-jeu>
+        </div>
+    </div>
+    <mat-icon class="action-button" fontIcon="chevron_right"></mat-icon>
+    <h3>Les prochaines sorties</h3>
+    <div class="biblioteque">
+        <div *ngFor="let jeu of jeuxDisponible">
+            <app-jeu [titre]="jeu.titre" [prix]="jeu.prix" [appartenu]="jeu.appartenu"
+                [imageUrl]="jeu.imageUrl"></app-jeu>
+        </div>
+    </div>
+    <mat-icon class="action-button" fontIcon="chevron_right"></mat-icon>
+</div>

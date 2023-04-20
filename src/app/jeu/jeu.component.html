@@ -1,0 +1,14 @@
+<div class="jeu">
+    <img class="jeu-image" src="assets/placeholder.png">
+    <div class="jeu-item">
+        <h4 *ngIf="appartenu">{{titre}}</h4>
+        <div *ngIf="appartenu">
+            <p><mat-icon class="icon" fontIcon="download"></mat-icon>Play online
+            </p>
+            <p><mat-icon class="icon" fontIcon="adjust"></mat-icon>Get media</p>
+        </div>
+        <div *ngIf="!appartenu">
+            <p><mat-icon class="icon" fontIcon="shopping_cart"></mat-icon>Buy</p>
+        </div>
+    </div>
+</div>

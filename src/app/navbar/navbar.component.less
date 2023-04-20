@@ -1,0 +1,23 @@
+@default-margin: 10px;
+
+.navbar {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+
+    a {
+        margin: @default-margin;
+        text-decoration: none;
+
+        &:visited {
+            color: black;
+        }
+    }
+}
+
+.logo {
+    height: 60px;
+    margin: @default-margin;
+    cursor: pointer;
+}
